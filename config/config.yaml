@@ -1,0 +1,10 @@
+# config.yaml
+models:
+  lstm:
+    layers: 2               # Reduced from 3 for memory efficiency
+    units: 64              # Down from 128
+    dropout: 0.2
+  pattern_recognition:
+    complexity: medium     # Balanced between accuracy and memory
+  sentiment:
+    refresh_interval: 30   # Minutes between model refreshes
