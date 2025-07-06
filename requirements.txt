@@ -1,0 +1,8 @@
+numpy==1.26.0
+pandas==2.1.0
+tensorflow==2.15.0
+python-telegram-bot==20.3
+ccxt==4.1.52
+ta-lib==0.4.24  # Technical analysis
+dill==0.3.7     # Efficient model serialization
+psutil==5.9.5   # Memory monitoring
