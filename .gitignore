@@ -1,0 +1,30 @@
+# Data and models
+data/historical/*
+!data/historical/.gitkeep
+data/realtime/*
+!data/realtime/.gitkeep
+models/production/*
+!models/production/.gitkeep
+models/training/*
+!models/training/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Mac
+.DS_Store
+
+# Backtest results
+backtest_results.txt
+backtest.txt
