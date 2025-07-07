@@ -1,29 +1,35 @@
-# Data and models
-data/historical/*
-!data/historical/.gitkeep
-data/realtime/*
-!data/realtime/.gitkeep
-models/production/*
-!models/production/.gitkeep
+# Data files
+data/historical/*.csv
+data/realtime/*.csv
+data/realtime/*.pkl
+
+# Model files
+models/production/*.pkl
+models/production/*.h5
 models/training/*
-!models/training/.gitkeep
+
+# Environment files
+.env
+*.env
 
 # Python cache
 __pycache__/
 *.pyc
 
-# Environment variables
-.env
-
-# IDE
+# IDE files
 .vscode/
 .idea/
 
-# Logs
-*.log
-
-# Mac
+# System files
 .DS_Store
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
 
 # Backtest results
 backtest_results.txt
