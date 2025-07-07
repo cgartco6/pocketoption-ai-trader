@@ -1,0 +1,12 @@
+pocket_option:
+  token: "YOUR_POCKET_OPTION_API_TOKEN"
+
+telegram:
+  token: "YOUR_TELEGRAM_BOT_TOKEN"
+  channel_id: "@your_trading_signals"
+
+alpha_vantage:
+  key: "YOUR_ALPHA_VANTAGE_KEY"
+
+newsapi:
+  key: "YOUR_NEWSAPI_KEY"
