@@ -1,0 +1,29 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /opt/trading-bot
+          git pull origin main
+          docker compose up -d --build
+    - name: Send deployment notification
+      uses: appleboy/telegram-action@master
+      with:
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        message: "🚀 New version deployed to trading server!"
