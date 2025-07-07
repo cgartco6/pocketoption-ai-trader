@@ -1,12 +1,12 @@
 pocket_option:
-  token: "YOUR_POCKET_OPTION_API_TOKEN"
+  token: "AKkBM7jXxdzaFsyj5"
 
 telegram:
-  token: "YOUR_TELEGRAM_BOT_TOKEN"
-  channel_id: "@your_trading_signals"
+  token: "7475784679:AAFK9Y183wxB_5YriDvkflYzveNwZRAt9vE"
+  channel_id: "@riantradingbot"
 
 alpha_vantage:
-  key: "YOUR_ALPHA_VANTAGE_KEY"
+  key: "D8MPHLSSGOAGV171"
 
 newsapi:
-  key: "YOUR_NEWSAPI_KEY"
+  key: "57376368a4a744318a104c5cde8a62f8"
