@@ -1,0 +1,29 @@
+name: Daily Backtest
+
+on:
+  schedule:
+    - cron: '0 4 * * *'  # 4 AM UTC daily
+  workflow_dispatch:
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Run backtest
+      run: python scripts/backtest.py --days 30 > backtest.txt
+    - name: Send results
+      uses: appleboy/telegram-action@master
+      with:
+        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        message: |
+          📊 Daily Backtest Results
+          ========================
+          $(cat backtest.txt)
