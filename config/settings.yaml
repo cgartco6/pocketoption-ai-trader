@@ -1,6 +1,8 @@
 trading:
   pairs: 
     - USD/ZAR
+    - AUD/CAD
+    - AUD/USD
     - USD/TRY
     - EUR/TRY
     - GBP/ZAR
