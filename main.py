@@ -1,4 +1,3 @@
-import yaml
 import time
 import gc
 from core.signal_generator import SignalGenerator
